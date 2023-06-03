@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      overflow: hidden;
-      border: none;
+
+<head>
+    <!-- <meta property="og:title" content="Texas Roleplay">
+    <meta property="og:site_name" content="Texas Roleplay | Home">
+    <meta property="og:url" content="https://texas-rp.github.io/">
+    <meta property="og:description" content="Texas Roleplay | Official website">
+    <meta property="og:type" content="website"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+            user-scalable=0">
+    <link rel="icon" href="https://texas-rp.github.io/src/texas.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./src/css/all.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Texas State Roleplay</title>
+</head>
+<style>
+    html {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
     }
 
-    iframe {
-      width: 100vw;
-      height: 100vh;
+    body {
+        background-color: rgb(53, 62, 82);
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url("./background/website.png");
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 0s;
+        overflow: hidden;
+        user-select: none;
     }
-  </style>
-  <body>
-    <iframe src="http://85.202.160.64:2216/"></iframe>
-  </body>
+
+    .corner-logo {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        left: 5px;
+        aspect-ratio: 1;
+        width: 100px;
+        bottom: -5px;
+        max-width: 25%;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a>Texas State Roleplay</a>
+        </div>
+        <div class="header-right">
+            <a href="./join/">Join ER:LC</a>
+            <!-- <a href="#more" class="icon">About</a> -->
+            <a href="./discord/" class="discord-icon">Discord</a>
+        </div>
+    </div>
+    <!-- <div class="rest-body"></div> -->
+    <!-- <a class="title">Welcome</a> -->
+    <img src="./src/texas-logo.png" draggable="false" class="corner-logo"></img>
+    <!-- <a class="back-to-top hidden" onclick="scrollToTop()">↑</a> -->
+</body>
+<div onclick="closeNav()" id="sidenav-back" class="sidenav-back hidden"></div>
+<script src="./src/js/main/script.js"></script>
+
 </html>

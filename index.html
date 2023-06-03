@@ -4,17 +4,17 @@
 <head>
     <!-- <meta property="og:title" content="Texas Roleplay">
     <meta property="og:site_name" content="Texas Roleplay | Home">
-    <meta property="og:url" content="https://texas-rp.github.io/">
-    <meta property="og:description" content="Texas Roleplay | Official website">
+    <meta property="og:url" content="https://lsr-games.github.io/">
+    <meta property="og:description" content="Texas Roleplay | Official Website">
     <meta property="og:type" content="website"> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
             user-scalable=0">
-    <link rel="icon" href="https://texas-rp.github.io/src/texas.png" type="image/x-icon">
+    <link rel="icon" href="https://minecraft.net//etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico" type="image/x-icon">
     <!-- <link rel="stylesheet" href="./src/css/all.css"> -->
     <link rel="stylesheet" href="style.css">
-    <title>Texas State Roleplay</title>
+    <title>Big City</title>
 </head>
 <style>
     html {
@@ -42,31 +42,48 @@
         padding: 0;
         margin: 0;
         position: absolute;
-        left: 5px;
+        left: 20px;
         aspect-ratio: 1;
-        width: 100px;
-        bottom: -5px;
+        width: 50px;
+        bottom: 20px;
         max-width: 25%;
     }
 </style>
 
 <body>
+    <div id="nav-menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="https://www.dropbox.com/s/gqzikg289sagoeg/Planet%20Minecraft%20City%20v1.zip?dl=1">[v1] luxury district</a>
+          <a href="https://www.dropbox.com/s/bvvmqu2nletcag6/Planet%20Minecraft%20City%20v2.zip?dl=1">[v2] subway and more</a>
+          <a href="https://www.dropbox.com/s/b3ckhg4iaqes0gr/Planet%20Minecraft%20City%20v3.zip?dl=1">[v3] little New York</a>
+          <a href="#">[v4] beach and café</a>
+        </div>
+      </div>
     <div class="header">
         <div class="logo">
-            <a>Texas State Roleplay</a>
+            <a>Big City [we take suggestions]</a>
         </div>
         <div class="header-right">
-            <a href="./join/">Join ER:LC</a>
             <!-- <a href="#more" class="icon">About</a> -->
-            <a href="./discord/" class="discord-icon">Discord</a>
+            <a onclick="openNav()" href="#version" class="discord-icon">Version</a>
         </div>
     </div>
     <!-- <div class="rest-body"></div> -->
     <!-- <a class="title">Welcome</a> -->
-    <img src="./src/texas-logo.png" draggable="false" class="corner-logo"></img>
+    <img src="https://minecraft.net//etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico" draggable="false" class="corner-logo"></img>
     <!-- <a class="back-to-top hidden" onclick="scrollToTop()">↑</a> -->
 </body>
 <div onclick="closeNav()" id="sidenav-back" class="sidenav-back hidden"></div>
 <script src="./src/js/main/script.js"></script>
+<script>
+    function openNav() {
+      document.getElementById("nav-menu").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("nav-menu").style.width = "0%";
+    }
+</script>
 
 </html>

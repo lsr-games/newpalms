@@ -21,23 +21,30 @@
         padding: 0;
         margin: 0;
         height: 100vh;
+
     }
 
     body {
         background-color: rgb(31, 31, 31);
         padding: 0;
         margin: 0;
-        width: 100%;
+        left: 0;
+        width: 100vw;
         height: 100vh;
         background-image: url("./background/website.png");
         background-position: center top;
         background-size: cover;
         background-repeat: no-repeat;
         transition: 0.5s;
-        overflow: hidden;
+        overflow-x: hidden;
         user-select: none;
     }
-
+    @media screen and (max-width: 700px) {
+        body {
+            background-image: none;
+            background-color: rgb(9, 78, 46);
+        }
+    }
     .corner-logo {
         padding: 0;
         margin: 0;
@@ -73,7 +80,8 @@
     </div>
     <!-- <div class="rest-body"></div> -->
     <!-- <a class="title">Welcome</a> -->
-    <img src="https://minecraft.net//etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico" draggable="false" class="corner-logo"></img>
+    <img src="./src/logo.png" draggable="false" class="corner-logo" style="width: 250px; height: 50px; max-width: 250px; max-height: 50px;"></img>
+    <!-- <img src="https://minecraft.net//etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico" draggable="false" class="corner-logo"></img> -->
     <!-- <a class="back-to-top hidden" onclick="scrollToTop()">↑</a> -->
 </body>
 <div onclick="closeNav()" id="sidenav-back" class="sidenav-back hidden"></div>

@@ -121,21 +121,21 @@
 <script>
     function openNav() {
         document.getElementById("overlay-content").style.display = ""
-        document.getElementById("nav-menu").style.width = "30%";
+        document.getElementById("nav-menu").classList.add('nav-width')
     }
     
     function closeNav() {
         document.getElementById("overlay-content").style.display = "none"
-        document.getElementById("nav-menu").style.width = "";
+        document.getElementById("nav-menu").classList.remove('nav-width')
     }
     function openNavLeft() {
         document.getElementById("overlay-content-left").style.display = ""
-        document.getElementById("nav-menu-left").style.width = "30%";
+        document.getElementById("nav-menu").classList.add('nav-width')
     }
     
     function closeNavLeft() {
         document.getElementById("overlay-content-left").style.display = "none"
-        document.getElementById("nav-menu-left").style.width = "";
+        document.getElementById("nav-menu").classList.remove('nav-width')
     }
 </script>
 

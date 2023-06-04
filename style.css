@@ -92,6 +92,10 @@
 
 /* overlay */
 
+.nav-width {
+  width: 30% !important;
+}
+
 .overlay {
   height: 100%;
   width: 0;
@@ -370,6 +374,10 @@ div#links:hover {
   }
 }
 @media screen and (max-width: 1200px) {
+  .nav-width {
+    width: 50% !important;
+  }
+
   .closebtn,
   .overlay-content {
     zoom: 0.6;
@@ -377,6 +385,7 @@ div#links:hover {
 
   div#version {
     font-size: 75%;
+    width: 100%;
   }
 
   /* left */
@@ -391,22 +400,32 @@ div#links:hover {
 }
 
 @media screen and (max-width: 700px) {
-  .closebtn,
-  .overlay-content {
-    zoom: 0.6;
+  #nav-menu {
+    width: 100%;
   }
 
+  .overlay-content,
+  .container-icon {
+    width: 100%;
+  }
+
+  .closebtn {
+    zoom: 0.6;
+  }
   div#version span {
     font-size: 150%;
     font-weight: 0;
   }
 
   /* left */
-  .closebtn-left,
-  .overlay-content-left {
-    zoom: 0.6;
+  .overlay-content-left,
+  .container-icon-left {
+    width: 100%;
   }
 
+  .closebtn-left {
+    zoom: 0.6;
+  }
   div#links span {
     font-size: 150%;
     font-weight: 0;

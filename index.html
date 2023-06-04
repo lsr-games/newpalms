@@ -39,6 +39,28 @@
         overflow-x: hidden;
         user-select: none;
     }
+
+    body {
+        padding: 0;
+        margin: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(31, 31, 31);
+        overflow-x: hidden;
+        user-select: none;
+    }
+
+    #video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
     /* @media screen and (max-width: 700px) {
         body {
             background-image: none;
@@ -48,38 +70,41 @@
 </style>
 
 <body onload="closeNav(), closeNavLeft()">
+    <video id="video-background" autoplay loop muted>
+        <source src="https://www.dropbox.com/s/obi06zneg8pnofq/Unbenanntes%20Video%20%E2%80%93%20Mit%20Clipchamp%20erstellt%20%282%29.mp4?dl=1" type="video/mp4">
+    </video>
     <div id="nav-menu" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div id="overlay-content" class="overlay-content">
             <div class="container-icon">
                 <a href="https://www.dropbox.com/s/gqzikg289sagoeg/Planet%20Minecraft%20City%20v1.zip?dl=1">
-                <div id="version">
-                    <img class="icon" src="src/versions/v1.png" alt="Icon">
-                    <span class="text">luxury district</span>
-                </div>
-            </a>
-            <a href="https://www.dropbox.com/s/bvvmqu2nletcag6/Planet%20Minecraft%20City%20v2.zip?dl=1">
-                <div id="version">
-                    <img class="icon" src="src/versions/v2.png" alt="Icon">
-                    <span class="text">subway and more</span>
-                </div>
-            </a>
-            <a href="https://www.dropbox.com/s/b3ckhg4iaqes0gr/Planet%20Minecraft%20City%20v3.zip?dl=1">
-                <div id="version">
-                    <img class="icon" src="src/versions/v3.png" alt="Icon">
-                    <span class="text">little new york</span>
-                </div>
-            </a>
-            <a href="https://www.dropbox.com/s/7dry0rb8ibsyjzh/Planet%20Minecraft%20City%20v4.zip?dl=1">
-                <div id="version">
-                    <img class="icon" src="src/versions/v4.png" alt="Icon">
-                    <span class="text">beach and café</span>
-                </div>
-            </a>
+                    <div id="version">
+                        <img class="icon" src="src/versions/v1.png" alt="Icon">
+                        <span class="text">luxury district</span>
+                    </div>
+                </a>
+                <a href="https://www.dropbox.com/s/bvvmqu2nletcag6/Planet%20Minecraft%20City%20v2.zip?dl=1">
+                    <div id="version">
+                        <img class="icon" src="src/versions/v2.png" alt="Icon">
+                        <span class="text">subway and more</span>
+                    </div>
+                </a>
+                <a href="https://www.dropbox.com/s/b3ckhg4iaqes0gr/Planet%20Minecraft%20City%20v3.zip?dl=1">
+                    <div id="version">
+                        <img class="icon" src="src/versions/v3.png" alt="Icon">
+                        <span class="text">little new york</span>
+                    </div>
+                </a>
+                <a href="https://www.dropbox.com/s/7dry0rb8ibsyjzh/Planet%20Minecraft%20City%20v4.zip?dl=1">
+                    <div id="version">
+                        <img class="icon" src="src/versions/v4.png" alt="Icon">
+                        <span class="text">beach and café</span>
+                    </div>
+                </a>
             </div>
         </div>
-      </div>
-      <div id="nav-menu-left" class="overlay-left">
+    </div>
+    <div id="nav-menu-left" class="overlay-left">
         <a href="javascript:void(0)" class="closebtn-left" onclick="closeNavLeft()">&times;</a>
         <div id="overlay-content-left" class="overlay-content-left">
             <div class="container-icon-left">
@@ -97,7 +122,7 @@
                 </a>
             </div>
         </div>
-      </div>
+    </div>
 
     <div class="header">
         <div class="logo">
@@ -123,7 +148,7 @@
         document.getElementById("nav-menu").classList.add('nav-width');
         document.getElementById("nav-menu").style.display = "";
     }
-    
+
     function closeNav() {
         document.getElementById("overlay-content").style.display = "none";
         document.getElementById("nav-menu").classList.remove('nav-width');
@@ -134,7 +159,7 @@
         document.getElementById("nav-menu-left").classList.add('nav-width');
         document.getElementById("nav-menu-left").style.display = "";
     }
-    
+
     function closeNavLeft() {
         document.getElementById("overlay-content-left").style.display = "none";
         document.getElementById("nav-menu-left").classList.remove('nav-width');

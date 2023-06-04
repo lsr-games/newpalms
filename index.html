@@ -14,7 +14,7 @@
     <link rel="icon" href="https://minecraft.net//etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico" type="image/x-icon">
     <!-- <link rel="stylesheet" href="./src/css/all.css"> -->
     <link rel="stylesheet" href="style.css">
-    <title>Big City</title>
+    <title>New Palms</title>
 </head>
 <style>
     html {
@@ -53,7 +53,7 @@
 <body>
     <div id="nav-menu" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
+        <div id="overlay-content" class="overlay-content">
           <a href="https://www.dropbox.com/s/gqzikg289sagoeg/Planet%20Minecraft%20City%20v1.zip?dl=1">[v1] luxury district</a>
           <a href="https://www.dropbox.com/s/bvvmqu2nletcag6/Planet%20Minecraft%20City%20v2.zip?dl=1">[v2] subway and more</a>
           <a href="https://www.dropbox.com/s/b3ckhg4iaqes0gr/Planet%20Minecraft%20City%20v3.zip?dl=1">[v3] little New York</a>
@@ -62,10 +62,12 @@
       </div>
     <div class="header">
         <div class="logo">
-            <a>Big City [we take suggestions]</a>
+            <a>New Palms</a>
         </div>
         <div class="header-right">
             <!-- <a href="#more" class="icon">About</a> -->
+            <a href="#" class="icon" onclick="changeBackgroundImageBackward(-1)">↩</a>
+            <a href="#" class="icon" onclick="changeBackgroundImageForward(1)">↪</a>
             <a onclick="openNav()" href="#version" class="discord-icon">Download</a>
         </div>
     </div>
@@ -75,14 +77,16 @@
     <!-- <a class="back-to-top hidden" onclick="scrollToTop()">↑</a> -->
 </body>
 <div onclick="closeNav()" id="sidenav-back" class="sidenav-back hidden"></div>
-<script src="./src/js/main/script.js"></script>
+<script src="./script.js"></script>
 <script>
     function openNav() {
-      document.getElementById("nav-menu").style.width = "100%";
+        document.getElementById("overlay-content").style.display = ""
+        document.getElementById("nav-menu").style.width = "50%";
     }
     
     function closeNav() {
-      document.getElementById("nav-menu").style.width = "0%";
+        document.getElementById("overlay-content").style.display = "none"
+        document.getElementById("nav-menu").style.width = "";
     }
 </script>
 

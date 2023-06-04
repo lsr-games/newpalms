@@ -120,6 +120,11 @@ div#version:hover {
   transition: 0 3s;
 }
 
+.container-icon {
+  width: 100%;
+  left: 0;
+}
+
 .corner-logo {
   padding: 0;
   margin: 0;
@@ -142,6 +147,7 @@ div#version:hover {
   top: 0;
   margin: 0;
   z-index: -1;
+  left: 0;
 }
 
 .icon {
@@ -164,7 +170,7 @@ div#version {
   background-color: var(--color1);
   padding: 20px 20px;
   margin: 0;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   cursor: pointer;
   margin-top: 35px;
   transition: 0.5s;
@@ -283,12 +289,11 @@ div#version {
 div#links {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   background-color: var(--color1);
   padding: 20px 20px;
   margin: 0;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   cursor: pointer;
   margin-top: 35px;
   transition: 0.5s;
@@ -298,6 +303,11 @@ div#links {
 div#links:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transition: 0 3s;
+}
+
+.container-icon-left {
+  width: 100%;
+  left: 0;
 }
 /*.overlay a:hover,
 .overlay a:focus {
@@ -335,5 +345,70 @@ div#links:hover {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+}
+
+/* fix */
+@media screen and (max-height: 650px) {
+  .closebtn,
+  .overlay-content {
+    zoom: 0.6;
+  }
+
+  div#version {
+    font-size: 75%;
+  }
+
+  /* left */
+  .closebtn-left,
+  .overlay-content-left {
+    zoom: 0.6;
+  }
+
+  div#links {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .closebtn,
+  .overlay-content {
+    zoom: 0.6;
+  }
+
+  div#version {
+    font-size: 75%;
+  }
+
+  /* left */
+  .closebtn-left,
+  .overlay-content-left {
+    zoom: 0.6;
+  }
+
+  div#links {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .closebtn,
+  .overlay-content {
+    zoom: 0.6;
+  }
+
+  div#version span {
+    font-size: 150%;
+    font-weight: 0;
+  }
+
+  /* left */
+  .closebtn-left,
+  .overlay-content-left {
+    zoom: 0.6;
+  }
+
+  div#links span {
+    font-size: 150%;
+    font-weight: 0;
   }
 }

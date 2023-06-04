@@ -47,7 +47,7 @@
     } */
 </style>
 
-<body>
+<body onload="closeNav()">
     <div id="nav-menu" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div id="overlay-content" class="overlay-content">
@@ -116,26 +116,29 @@
     <!-- <img src="https://minecraft.net//etc.clientlibs/minecraft/clientlibs/main/resources/favicon.ico" draggable="false" class="corner-logo"></img> -->
     <!-- <a class="back-to-top hidden" onclick="scrollToTop()">↑</a> -->
 </body>
-<div onclick="closeNav()" id="sidenav-back" class="sidenav-back hidden"></div>
 <script src="./script.js"></script>
 <script>
     function openNav() {
-        document.getElementById("overlay-content").style.display = ""
-        document.getElementById("nav-menu").classList.add('nav-width')
+        document.getElementById("overlay-content").style.display = "";
+        document.getElementById("nav-menu").classList.add('nav-width');
+        document.getElementById("nav-menu").style.display = "";
     }
     
     function closeNav() {
-        document.getElementById("overlay-content").style.display = "none"
-        document.getElementById("nav-menu").classList.remove('nav-width')
+        document.getElementById("overlay-content").style.display = "none";
+        document.getElementById("nav-menu").classList.remove('nav-width');
+        document.getElementById("nav-menu").style.display = "none";
     }
     function openNavLeft() {
-        document.getElementById("overlay-content-left").style.display = ""
-        document.getElementById("nav-menu-left").classList.add('nav-width')
+        document.getElementById("overlay-content-left").style.display = "";
+        document.getElementById("nav-menu-left").classList.add('nav-width');
+        document.getElementById("nav-menu-left").style.display = "";
     }
     
     function closeNavLeft() {
-        document.getElementById("overlay-content-left").style.display = "none"
-        document.getElementById("nav-menu-left").classList.remove('nav-width')
+        document.getElementById("overlay-content-left").style.display = "none";
+        document.getElementById("nav-menu-left").classList.remove('nav-width');
+        document.getElementById("nav-menu-left").style.display = "none";
     }
 </script>
 

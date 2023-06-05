@@ -35,7 +35,6 @@
         background-position: center top;
         background-size: cover;
         background-repeat: no-repeat;
-        transition: 0.5s;
         overflow-x: hidden;
         user-select: none;
     }
@@ -121,28 +120,41 @@
 </body>
 <script src="./script.js"></script>
 <script>
-    function openNav() {
-        document.getElementById("overlay-content").style.display = "";
-        document.getElementById("nav-menu").classList.add('nav-width');
-        document.getElementById("nav-menu").style.display = "";
-    }
+  function openNav() {
+  document.getElementById("overlay-content").style.display = "";
+  document.getElementById("nav-menu").style.display = "";
+  
+  setTimeout(function() {
+    document.getElementById("nav-menu").classList.add('nav-width');
+  }, 100); // Add a small delay (100ms) before adding the class
+}
 
-    function closeNav() {
-        document.getElementById("overlay-content").style.display = "none";
-        document.getElementById("nav-menu").classList.remove('nav-width');
-        document.getElementById("nav-menu").style.display = "none";
-    }
-    function openNavLeft() {
-        document.getElementById("overlay-content-left").style.display = "";
-        document.getElementById("nav-menu-left").classList.add('nav-width');
-        document.getElementById("nav-menu-left").style.display = "";
-    }
+function closeNav() {
+  document.getElementById("overlay-content").style.display = "none";
+  document.getElementById("nav-menu").classList.remove('nav-width');
+  
+  setTimeout(function() {
+    document.getElementById("nav-menu").style.display = "none";
+  }, 300); // Add a small delay (300ms) before hiding the element
+}
 
-    function closeNavLeft() {
-        document.getElementById("overlay-content-left").style.display = "none";
-        document.getElementById("nav-menu-left").classList.remove('nav-width');
-        document.getElementById("nav-menu-left").style.display = "none";
-    }
+function openNavLeft() {
+  document.getElementById("overlay-content-left").style.display = "";
+  document.getElementById("nav-menu-left").style.display = "";
+  
+  setTimeout(function() {
+    document.getElementById("nav-menu-left").classList.add('nav-width');
+  }, 100); // Add a small delay (100ms) before adding the class
+}
+
+function closeNavLeft() {
+  document.getElementById("overlay-content-left").style.display = "none";
+  document.getElementById("nav-menu-left").classList.remove('nav-width');
+  
+  setTimeout(function() {
+    document.getElementById("nav-menu-left").style.display = "none";
+  }, 300); // Add a small delay (300ms) before hiding the element
+}
 </script>
 
 </html>

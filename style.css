@@ -15,6 +15,34 @@
   font-family: CustomFont;
   text-decoration: none;
 }
+/* 
+body.luxury-district {
+  background-image: url("./background/luxury.png");
+  transition: 0.5s ease-out;
+}
+
+body.subway-and-more {
+  background-image: url("./background/subway.png");
+  transition: 0.5s ease-out;
+}
+
+body.little-new-york {
+  background-image: url("./background/new_york.png");
+  transition: 0.5s ease-out;
+}
+
+body.beach-and-cafe {
+  background-image: url("./background/cafe.png");
+  transition: 0.5s ease-out;
+} */
+
+body.image-transition {
+  transition: background-image 0.5s ease-out;
+}
+
+.hover-img {
+  cursor: pointer;
+}
 
 div.header {
   font-family: Arial, Helvetica, sans-serif;

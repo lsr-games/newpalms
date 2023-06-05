@@ -27,7 +27,6 @@
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   z-index: 10;
   zoom: 1.5;
-  transition: none !important;
 }
 
 .rest-body {
@@ -109,6 +108,7 @@
   display: flex;
   align-items: center;
   text-align: center;
+  outline: 1px rgba(255, 255, 255, 0.1) solid;
 }
 
 .overlay-content {
@@ -206,6 +206,7 @@ div#version {
 .overlay .closebtn:hover {
   color: white;
   transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-height: 450px) {
@@ -254,6 +255,7 @@ div#version {
   display: flex;
   align-items: center;
   text-align: center;
+  outline: 1px rgba(255, 255, 255, 0.1) solid;
 }
 
 .overlay-content-left {
@@ -339,6 +341,7 @@ div#links:hover {
 .overlay-left .closebtn-left:hover {
   color: white;
   transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-height: 450px) {
@@ -411,6 +414,10 @@ div#links:hover {
 
   .closebtn {
     zoom: 0.6;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 100% !important;
+    margin-top: 20px !important;
   }
   div#version span {
     font-size: 150%;
@@ -425,6 +432,10 @@ div#links:hover {
 
   .closebtn-left {
     zoom: 0.6;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 100% !important;
+    margin-top: 20px !important;
   }
   div#links span {
     font-size: 150%;

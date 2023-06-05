@@ -105,7 +105,7 @@ div.header {
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   transition: width 0.3s ease;
   display: flex;
   align-items: center;
@@ -253,7 +253,7 @@ div#version {
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   transition: width 0.3s ease;
   display: flex;
   align-items: center;

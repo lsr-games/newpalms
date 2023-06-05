@@ -105,7 +105,7 @@ function changeBackgroundImageBackward() {
 // });
 const body = document.body;
 const imageElements = document.querySelectorAll(".hover-img");
-const imageCache = [];
+let currentImage = null;
 
 // Preload images
 imageElements.forEach(function (element) {
@@ -113,7 +113,6 @@ imageElements.forEach(function (element) {
   if (bg) {
     const img = new Image();
     img.src = bg;
-    imageCache.push(img);
   }
 });
 
@@ -121,16 +120,20 @@ imageElements.forEach(function (element) {
   element.addEventListener("mouseover", function () {
     const bg = element.getAttribute("data-bg");
     if (bg) {
-      body.addEventListener("transitionend", function () {
+      if (currentImage !== element) {
+        currentImage = element;
         body.style.backgroundImage = `url('${bg}')`;
-      });
-
-      body.classList.add("image-transition");
+        body.classList.add("image-transition");
+      }
     }
   });
 
-  element.addEventListener("mouseout", function () {
-    body.style.backgroundImage = "";
-    body.classList.remove("image-transition");
+  element.addEventListener("mouseout", function (event) {
+    const relatedTarget = event.relatedTarget;
+    if (!relatedTarget || !relatedTarget.classList.contains("hover-img")) {
+      body.style.backgroundImage = "";
+      body.classList.remove("image-transition");
+      currentImage = null;
+    }
   });
 });

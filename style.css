@@ -224,7 +224,7 @@ div#version {
 .overlay .closebtn {
   position: absolute;
   top: 20px;
-  left: 45px;
+  right: 25px;
   font-size: 60px;
   color: rgb(197, 197, 197);
   background-color: var(--color1);
@@ -360,7 +360,7 @@ div#links:hover {
 .overlay-left .closebtn-left {
   position: absolute;
   top: 20px;
-  right: 45px;
+  left: 25px;
   font-size: 60px;
   color: rgb(197, 197, 197);
   background-color: var(--color1);

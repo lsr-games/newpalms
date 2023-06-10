@@ -38,6 +38,25 @@
         overflow-x: hidden;
         user-select: none;
         transition: background-image 0.5s;
+        transition: 0.3s;
+    }
+
+    body.lightmode {
+        background-color: rgb(31, 31, 31);
+        background-image: url("./background/website_light.png");
+        transition: 0.3s;
+    }
+
+    div.header.lightmode {
+        background-color: rgba(196, 196, 196, 0.4);
+        box-shadow: rgba(177, 177, 177, 0.1);
+        transition: 0.3s;
+    }
+
+    #header div a.lightmode {
+        color: rgb(31, 31, 31);
+        text-shadow: white;
+        transition: 0.5s;
     }
 
 
@@ -55,37 +74,43 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div id="overlay-content" class="overlay-content">
             <div class="container-icon">
-                <a id="luxury-district" class="hover-img" data-bg="./background/luxury.png" href="https://www.dropbox.com/s/gqzikg289sagoeg/Planet%20Minecraft%20City%20v1.zip?dl=1">
+                <a id="luxury-district" class="hover-img" data-bg="./background/luxury.png"
+                    href="https://www.dropbox.com/s/gqzikg289sagoeg/Planet%20Minecraft%20City%20v1.zip?dl=1">
                     <div id="version">
                         <img class="icon" src="src/versions/v1.png" alt="Icon">
                         <span class="text">luxury district</span>
                     </div>
                 </a>
-                <a id="subway-and-more" class="hover-img" data-bg="./background/subway.png" href="https://www.dropbox.com/s/bvvmqu2nletcag6/Planet%20Minecraft%20City%20v2.zip?dl=1">
+                <a id="subway-and-more" class="hover-img" data-bg="./background/subway.png"
+                    href="https://www.dropbox.com/s/bvvmqu2nletcag6/Planet%20Minecraft%20City%20v2.zip?dl=1">
                     <div id="version">
                         <img class="icon" src="src/versions/v2.png" alt="Icon">
                         <span class="text">subway and more</span>
                     </div>
                 </a>
-                <a id="little-new-york" class="hover-img" data-bg="./background/new_york.png" href="https://www.dropbox.com/s/b3ckhg4iaqes0gr/Planet%20Minecraft%20City%20v3.zip?dl=1">
+                <a id="little-new-york" class="hover-img" data-bg="./background/new_york.png"
+                    href="https://www.dropbox.com/s/b3ckhg4iaqes0gr/Planet%20Minecraft%20City%20v3.zip?dl=1">
                     <div id="version">
                         <img class="icon" src="src/versions/v3.png" alt="Icon">
                         <span class="text">little new york</span>
                     </div>
                 </a>
-                <a id="beach-and-cafe" class="hover-img" data-bg="./background/cafe.png" href="https://www.dropbox.com/s/7dry0rb8ibsyjzh/Planet%20Minecraft%20City%20v4.zip?dl=1">
+                <a id="beach-and-cafe" class="hover-img" data-bg="./background/cafe.png"
+                    href="https://www.dropbox.com/s/7dry0rb8ibsyjzh/Planet%20Minecraft%20City%20v4.zip?dl=1">
                     <div id="version">
                         <img class="icon" src="src/versions/v4.png" alt="Icon">
                         <span class="text">beach and café</span>
                     </div>
                 </a>
-                <a id="police-part-one" class="hover-img" data-bg="./background/police-part-one.png" href="https://www.dropbox.com/s/odrjb5k8rlm4e63/Planet%20Minecraft%20City%20v5.zip?dl=1">
+                <a id="police-part-one" class="hover-img" data-bg="./background/police-part-one.png"
+                    href="https://www.dropbox.com/s/odrjb5k8rlm4e63/Planet%20Minecraft%20City%20v5.zip?dl=1">
                     <div id="version">
                         <img class="icon" src="src/versions/v5.png" alt="Icon">
                         <span class="text">police part 1</span>
                     </div>
                 </a>
-                <a id="police-part-one" class="hover-img" data-bg="./background/police-part-two.png" href="https://www.dropbox.com/s/4bbenbv5cpubp0y/Planet%20Minecraft%20City%20v6.zip?dl=1">
+                <a id="police-part-one" class="hover-img" data-bg="./background/police-part-two.png"
+                    href="https://www.dropbox.com/s/4bbenbv5cpubp0y/Planet%20Minecraft%20City%20v6.zip?dl=1">
                     <div id="version">
                         <img class="icon" src="src/versions/v6.png" alt="Icon">
                         <span class="text">shops and police 2
@@ -115,15 +140,22 @@
         </div>
     </div>
 
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo">
-            <a href="#" onclick="openNavLeft()">New Palms</a>
+            <a class="canbelightmode" href="#" onclick="openNavLeft()">New Palms</a>
         </div>
         <div class="header-right">
             <!-- <a href="https://www.planetminecraft.com/project/luxury-district-in-big-city#reply_container" class="icon">Suggest</a> -->
             <!-- <a href="#" class="icon" onclick="changeBackgroundImageBackward()">↩</a>
             <a href="#" class="icon" onclick="changeBackgroundImageForward()">↪</a> -->
-            <a onclick="openNav()" href="#version" class="discord-icon">Download</a>
+            <!-- <a class="switch" onclick="darkmode()"><input type="checkbox" id="switch" /><label id="switch-label"
+                    for="switch">Toggle</label></a> -->
+            <a class="switch-container">
+                <div class="switch" id="switch" onclick="darkmode()">
+                    <div class="switch-button" id="switch-button"></div>
+                </div>
+            </a>
+            <a onclick="openNav()" href="#version" class="canbelightmode">Download</a>
         </div>
     </div>
     <!-- <div class="rest-body"></div> -->
@@ -134,41 +166,56 @@
 </body>
 <script src="./script.js"></script>
 <script>
-  function openNav() {
-  document.getElementById("overlay-content").style.display = "";
-  document.getElementById("nav-menu").style.display = "";
-  
-  setTimeout(function() {
-    document.getElementById("nav-menu").classList.add('nav-width');
-  }, 100); // Add a small delay (100ms) before adding the class
-}
+    function openNav() {
+        document.getElementById("overlay-content").style.display = "";
+        document.getElementById("nav-menu").style.display = "";
 
-function closeNav() {
-  document.getElementById("overlay-content").style.display = "none";
-  document.getElementById("nav-menu").classList.remove('nav-width');
-  
-  setTimeout(function() {
-    document.getElementById("nav-menu").style.display = "none";
-  }, 300); // Add a small delay (300ms) before hiding the element
-}
+        setTimeout(function () {
+            document.getElementById("nav-menu").classList.add('nav-width');
+        }, 100); // Add a small delay (100ms) before adding the class
+    }
 
-function openNavLeft() {
-  document.getElementById("overlay-content-left").style.display = "";
-  document.getElementById("nav-menu-left").style.display = "";
-  
-  setTimeout(function() {
-    document.getElementById("nav-menu-left").classList.add('nav-width');
-  }, 100); // Add a small delay (100ms) before adding the class
-}
+    function closeNav() {
+        document.getElementById("overlay-content").style.display = "none";
+        document.getElementById("nav-menu").classList.remove('nav-width');
 
-function closeNavLeft() {
-  document.getElementById("overlay-content-left").style.display = "none";
-  document.getElementById("nav-menu-left").classList.remove('nav-width');
-  
-  setTimeout(function() {
-    document.getElementById("nav-menu-left").style.display = "none";
-  }, 300); // Add a small delay (300ms) before hiding the element
-}
+        setTimeout(function () {
+            document.getElementById("nav-menu").style.display = "none";
+        }, 300); // Add a small delay (300ms) before hiding the element
+    }
+
+    function openNavLeft() {
+        document.getElementById("overlay-content-left").style.display = "";
+        document.getElementById("nav-menu-left").style.display = "";
+
+        setTimeout(function () {
+            document.getElementById("nav-menu-left").classList.add('nav-width');
+        }, 100); // Add a small delay (100ms) before adding the class
+    }
+
+    function closeNavLeft() {
+        document.getElementById("overlay-content-left").style.display = "none";
+        document.getElementById("nav-menu-left").classList.remove('nav-width');
+
+        setTimeout(function () {
+            document.getElementById("nav-menu-left").style.display = "none";
+        }, 300); // Add a small delay (300ms) before hiding the element
+    }
+
+    function darkmode() {
+
+        document.body.classList.toggle('lightmode');
+        document.getElementById('header').classList.toggle('lightmode');
+        document.querySelectorAll(".canbelightmode").forEach((el) => {
+            el.classList.toggle('lightmode');
+        });
+
+        var button = document.getElementById("switch-button");
+        button.classList.toggle("switch-button-dark-mode");
+
+        var container = document.getElementById("switch");
+        container.classList.toggle("switch-dark-mode");
+    }
 </script>
 
 </html>

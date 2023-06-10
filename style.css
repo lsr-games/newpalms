@@ -70,7 +70,6 @@ div.header {
 
 .header a {
   float: left;
-  color: black;
   text-align: center;
   padding: 6px;
   height: 25px;
@@ -486,4 +485,49 @@ div#links:hover {
     font-size: 150%;
     font-weight: 0;
   }
+}
+
+/* switch */
+a.switch-container {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(31, 31, 31, 0.2);
+  outline: 2px solid rgb(31, 31, 31);
+  border-radius: 100px;
+  width: 50px;
+  height: 20px;
+  transition: 0.3s !important;
+  position: relative;
+}
+
+.switch-dark-mode {
+  justify-content: flex-end;
+  background-color: #ffffff38;
+  transition: justify-content 1s ease;
+  outline: 2px solid orange;
+}
+
+.switch-button {
+  border-radius: 100px;
+  height: 20px;
+  width: 20px;
+  background-image: url("src/icons/dark.png");
+  background-size: cover;
+  margin: 0px 3px;
+}
+
+.switch-button-dark-mode {
+  position: absolute;
+  background-image: url("src/icons/light.png");
+  background-size: cover;
+  right: 0;
 }
